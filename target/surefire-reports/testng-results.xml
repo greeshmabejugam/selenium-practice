@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-02-17T23:26:34 EST" name="Surefire suite" finished-at="2026-02-17T23:26:42 EST" duration-ms="7818">
+    <groups>
+    </groups>
+    <test started-at="2026-02-17T23:26:34 EST" name="Surefire test" finished-at="2026-02-17T23:26:42 EST" duration-ms="7818">
+      <class name="com.selenium.practicesession.SecureAreaTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.selenium.practicesession.SecureAreaTest@75c072cb]" started-at="2026-02-17T23:26:39 EST" name="setup" finished-at="2026-02-17T23:26:40 EST" duration-ms="1859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="secureAreaTest()[pri:0, instance:com.selenium.practicesession.SecureAreaTest@75c072cb]" started-at="2026-02-17T23:26:40 EST" name="secureAreaTest" finished-at="2026-02-17T23:26:41 EST" duration-ms="1073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- secureAreaTest -->
+        <test-method is-config="true" signature="closeAll()[pri:0, instance:com.selenium.practicesession.SecureAreaTest@75c072cb]" started-at="2026-02-17T23:26:41 EST" name="closeAll" finished-at="2026-02-17T23:26:42 EST" duration-ms="126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeAll -->
+      </class> <!-- com.selenium.practicesession.SecureAreaTest -->
+      <class name="com.selenium.practicesession.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.selenium.practicesession.LoginTest@c540f5a]" started-at="2026-02-17T23:26:34 EST" name="setup" finished-at="2026-02-17T23:26:37 EST" duration-ms="3637" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validLoginTest()[pri:0, instance:com.selenium.practicesession.LoginTest@c540f5a]" started-at="2026-02-17T23:26:37 EST" name="validLoginTest" finished-at="2026-02-17T23:26:38 EST" duration-ms="932" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.selenium.practicesession.LoginTest@c540f5a]" started-at="2026-02-17T23:26:38 EST" name="tearDown" finished-at="2026-02-17T23:26:39 EST" duration-ms="147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.selenium.practicesession.LoginTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
