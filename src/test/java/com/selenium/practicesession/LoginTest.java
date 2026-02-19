@@ -51,6 +51,9 @@ public class LoginTest {
         driver.manage().window().maximize();
         lp = new LoginPage(driver);
     }
+    
+ // This test verifies successful login
+ 
 
     @Test
     public void validLoginTest() {
