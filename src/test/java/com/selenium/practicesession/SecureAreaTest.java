@@ -27,6 +27,7 @@ public class SecureAreaTest {
 	    driver = new ChromeDriver(options);
 	    driver.manage().window().maximize();
 	    lp = new LoginPage(driver);
+	    sp = new SecurePage(driver);
 	}
 	
 	@Test
