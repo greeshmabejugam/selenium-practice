@@ -46,11 +46,16 @@ public class LoginTest {
     
     @BeforeMethod
     public void setup() {
-    	ChromeOptions options = new ChromeOptions();
-//    	options.addArguments("--headless");
-//    	options.addArguments("--no-sandbox");
-//    	options.addArguments("--disable-dev-shm-usage");
-    	driver = new ChromeDriver(options);
+        ChromeOptions options = new ChromeOptions();
+        
+        // automatically use headless on CI server, normal on local Mac
+        if(System.getenv("CI") != null) {
+            options.addArguments("--headless");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+        }
+        
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         lp = new LoginPage(driver);
     }
