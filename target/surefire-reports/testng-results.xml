@@ -1,35 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-17T23:26:34 EST" name="Surefire suite" finished-at="2026-02-17T23:26:42 EST" duration-ms="7818">
+  <suite started-at="2026-02-19T00:28:54 EST" name="Surefire suite" finished-at="2026-02-19T00:29:05 EST" duration-ms="10830">
     <groups>
     </groups>
-    <test started-at="2026-02-17T23:26:34 EST" name="Surefire test" finished-at="2026-02-17T23:26:42 EST" duration-ms="7818">
+    <test started-at="2026-02-19T00:28:54 EST" name="Surefire test" finished-at="2026-02-19T00:29:05 EST" duration-ms="10830">
       <class name="com.selenium.practicesession.SecureAreaTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.selenium.practicesession.SecureAreaTest@75c072cb]" started-at="2026-02-17T23:26:39 EST" name="setup" finished-at="2026-02-17T23:26:40 EST" duration-ms="1859" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.selenium.practicesession.SecureAreaTest@17c1bced]" started-at="2026-02-19T00:29:03 EST" name="setup" finished-at="2026-02-19T00:29:04 EST" duration-ms="1387" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="secureAreaTest()[pri:0, instance:com.selenium.practicesession.SecureAreaTest@75c072cb]" started-at="2026-02-17T23:26:40 EST" name="secureAreaTest" finished-at="2026-02-17T23:26:41 EST" duration-ms="1073" status="PASS">
+        <test-method signature="secureAreaTest()[pri:0, instance:com.selenium.practicesession.SecureAreaTest@17c1bced]" started-at="2026-02-19T00:29:04 EST" name="secureAreaTest" finished-at="2026-02-19T00:29:05 EST" duration-ms="1268" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- secureAreaTest -->
-        <test-method is-config="true" signature="closeAll()[pri:0, instance:com.selenium.practicesession.SecureAreaTest@75c072cb]" started-at="2026-02-17T23:26:41 EST" name="closeAll" finished-at="2026-02-17T23:26:42 EST" duration-ms="126" status="PASS">
+        <test-method is-config="true" signature="closeAll()[pri:0, instance:com.selenium.practicesession.SecureAreaTest@17c1bced]" started-at="2026-02-19T00:29:05 EST" name="closeAll" finished-at="2026-02-19T00:29:05 EST" duration-ms="94" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeAll -->
       </class> <!-- com.selenium.practicesession.SecureAreaTest -->
       <class name="com.selenium.practicesession.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.selenium.practicesession.LoginTest@c540f5a]" started-at="2026-02-17T23:26:34 EST" name="setup" finished-at="2026-02-17T23:26:37 EST" duration-ms="3637" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.selenium.practicesession.LoginTest@275710fc]" started-at="2026-02-19T00:28:54 EST" name="setup" finished-at="2026-02-19T00:28:57 EST" duration-ms="2656" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validLoginTest()[pri:0, instance:com.selenium.practicesession.LoginTest@c540f5a]" started-at="2026-02-17T23:26:37 EST" name="validLoginTest" finished-at="2026-02-17T23:26:38 EST" duration-ms="932" status="PASS">
+        <test-method signature="validLoginTest(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.selenium.practicesession.LoginTest@275710fc]" started-at="2026-02-19T00:28:57 EST" name="validLoginTest" data-provider="loginData" finished-at="2026-02-19T00:28:58 EST" duration-ms="808" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tomsmith]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SuperSecretPassword!]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.selenium.practicesession.LoginTest@c540f5a]" started-at="2026-02-17T23:26:38 EST" name="tearDown" finished-at="2026-02-17T23:26:39 EST" duration-ms="147" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.selenium.practicesession.LoginTest@275710fc]" started-at="2026-02-19T00:28:58 EST" name="tearDown" finished-at="2026-02-19T00:28:58 EST" duration-ms="127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.selenium.practicesession.LoginTest@275710fc]" started-at="2026-02-19T00:28:58 EST" name="setup" finished-at="2026-02-19T00:28:59 EST" duration-ms="1370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validLoginTest(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.selenium.practicesession.LoginTest@275710fc]" started-at="2026-02-19T00:28:59 EST" name="validLoginTest" data-provider="loginData" finished-at="2026-02-19T00:29:00 EST" duration-ms="731" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wronguser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrongpassword]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.selenium.practicesession.LoginTest@275710fc]" started-at="2026-02-19T00:29:00 EST" name="tearDown" finished-at="2026-02-19T00:29:00 EST" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.selenium.practicesession.LoginTest@275710fc]" started-at="2026-02-19T00:29:00 EST" name="setup" finished-at="2026-02-19T00:29:02 EST" duration-ms="1460" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validLoginTest(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.selenium.practicesession.LoginTest@275710fc]" started-at="2026-02-19T00:29:02 EST" name="validLoginTest" data-provider="loginData" finished-at="2026-02-19T00:29:02 EST" duration-ms="719" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tomsmith]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrongpassword]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.selenium.practicesession.LoginTest@275710fc]" started-at="2026-02-19T00:29:02 EST" name="tearDown" finished-at="2026-02-19T00:29:03 EST" duration-ms="92" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

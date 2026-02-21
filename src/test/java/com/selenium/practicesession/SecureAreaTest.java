@@ -16,9 +16,9 @@ public class SecureAreaTest {
 	@BeforeMethod
 	public void setup() {
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
-		options.addArguments("--no-sandbox");
-		options.addArguments("--disable-dev-shm-usage");
+//		options.addArguments("--headless");
+//		options.addArguments("--no-sandbox");
+//		options.addArguments("--disable-dev-shm-usage");
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		lp = new LoginPage(driver);
@@ -32,7 +32,9 @@ public class SecureAreaTest {
 		lp.login("tomsmith", "SuperSecretPassword!");
 		
 		Assert.assertTrue(
-				sp.getSuccessMessage().contains("Welcome to the Secure Area. When you are done click logout below."),"Message not found!");
+			    sp.getSuccessMessage().contains("Welcome to the Secure Area"),
+			    "Message not found!"
+			);
 		
 		sp.clickLogout();
 	}

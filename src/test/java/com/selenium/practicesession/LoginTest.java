@@ -30,10 +30,13 @@
 package com.selenium.practicesession;
 
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class LoginTest {
@@ -44,21 +47,40 @@ public class LoginTest {
     @BeforeMethod
     public void setup() {
     	ChromeOptions options = new ChromeOptions();
-    	options.addArguments("--headless");
-    	options.addArguments("--no-sandbox");
-    	options.addArguments("--disable-dev-shm-usage");
+//    	options.addArguments("--headless");
+//    	options.addArguments("--no-sandbox");
+//    	options.addArguments("--disable-dev-shm-usage");
     	driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         lp = new LoginPage(driver);
     }
     
  // This test verifies successful login
+    @DataProvider(name = "loginData")
+    public Object[][] getLoginData() {
+        return new Object[][] {
+            {"tomsmith", "SuperSecretPassword!", true},   // valid - should pass
+            {"wronguser", "wrongpassword", false},         // invalid - should fail
+            {"tomsmith", "wrongpassword", false},          // wrong password - should fail
+        };
+    }
  
 
-    @Test
-    public void validLoginTest() {
-        lp.login("tomsmith", "SuperSecretPassword!");
-        System.out.println("Login successful!");
+    @Test(dataProvider = "loginData")
+    public void validLoginTest(String username, String password, boolean isValid) {
+    	
+        lp.login(username, password);
+        if(isValid) {
+            Assert.assertTrue(
+                lp.getSuccessMessage().contains("You logged into a secure area!"),
+                "Valid login failed!"
+            );
+        } else {
+        	Assert.assertTrue(
+        		    lp.getErrorMessage().contains("invalid!"),
+        		    "Invalid login did not show error!"
+        		);
+        }
     }
 
     @AfterMethod
