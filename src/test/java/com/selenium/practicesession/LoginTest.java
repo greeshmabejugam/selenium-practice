@@ -29,36 +29,25 @@
 
 package com.selenium.practicesession;
 
-import org.openqa.selenium.WebDriver;
-
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class LoginTest {
+public class LoginTest extends BaseTest {
 
-    WebDriver driver;
     LoginPage lp;
-    
+
     @BeforeMethod
-    public void setup() {
-        ChromeOptions options = new ChromeOptions();
-        
-        // automatically use headless on CI server, normal on local Mac
-        if(System.getenv("CI") != null) {
-            options.addArguments("--headless");
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
-        }
-        
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
+    public void initPages() {
         lp = new LoginPage(driver);
     }
+
+    // keep your @DataProvider and @Test exactly as they are
+
+//    
+//   
     
  // This test verifies successful login
     @DataProvider(name = "loginData")
@@ -73,7 +62,7 @@ public class LoginTest {
 
     @Test(dataProvider = "loginData")
     public void validLoginTest(String username, String password, boolean isValid) {
-    	
+    	test = extent.createTest("Login Test - " + username); 
         lp.login(username, password);
         if(isValid) {
             Assert.assertTrue(

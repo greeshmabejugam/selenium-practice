@@ -8,33 +8,24 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class SecureAreaTest {
-	WebDriver driver;
-	LoginPage lp;
-	SecurePage sp;
-	
-	@BeforeMethod
-	public void setup() {
-	    ChromeOptions options = new ChromeOptions();
-	    
-	    // automatically use headless on CI server, normal on local Mac
-	    if(System.getenv("CI") != null) {
-	        options.addArguments("--headless");
-	        options.addArguments("--no-sandbox");
-	        options.addArguments("--disable-dev-shm-usage");
-	    }
-	    
-	    driver = new ChromeDriver(options);
-	    driver.manage().window().maximize();
-	    lp = new LoginPage(driver);
-	    sp = new SecurePage(driver);
-	}
-	
+public class SecureAreaTest extends BaseTest {
+
+    LoginPage lp;
+    SecurePage sp;
+
+    @BeforeMethod
+    public void initPages() {
+        lp = new LoginPage(driver);
+        sp = new SecurePage(driver);
+    }
+
+    // keep your @Test exactly as it is
+
 	@Test
 	
 	public void secureAreaTest() {
 		lp.login("tomsmith", "SuperSecretPassword!");
-		
+		 test = extent.createTest("Secure Area Test");
 		Assert.assertTrue(
 			    sp.getSuccessMessage().contains("Welcome to the Secure Area"),
 			    "Message not found!"
