@@ -1,10 +1,6 @@
 package com.selenium.practicesession;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -24,8 +20,9 @@ public class SecureAreaTest extends BaseTest {
 	@Test
 	
 	public void secureAreaTest() {
+		test = extent.createTest("Secure Area Test");
 		lp.login("tomsmith", "SuperSecretPassword!");
-		 test = extent.createTest("Secure Area Test");
+		 
 		Assert.assertTrue(
 			    sp.getSuccessMessage().contains("Welcome to the Secure Area"),
 			    "Message not found!"
@@ -34,9 +31,9 @@ public class SecureAreaTest extends BaseTest {
 		sp.clickLogout();
 	}
 		
-	@AfterMethod
-	public void closeAll() {
-		driver.quit();
-	}
+//	@AfterMethod
+//	public void closeAll() {
+//		driver.quit();
+//	}
 
 }

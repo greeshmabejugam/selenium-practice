@@ -1,0 +1,15 @@
+<suite name="Practice Suite">
+
+    <test name="Login Tests">
+        <classes>
+            <class name="com.selenium.practicesession.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Secure Area Tests">
+        <classes>
+            <class name="com.selenium.practicesession.SecureAreaTest"/>
+        </classes>
+    </test>
+
+</suite>
