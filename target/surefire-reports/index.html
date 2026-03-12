@@ -108,17 +108,17 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Practice_Suite" title="com.selenium.practicesession.LoginTest" class="method navigator-link" hash-for-method="validLoginTest(wronguser, wrongpassword, false)">validLoginTest(wronguser, wrongpassword, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Practice_Suite" title="com.selenium.practicesession.LoginTest" class="method navigator-link" hash-for-method="validLoginTest(tomsmith, SuperSecretPassword!, true)">validLoginTest(tomsmith, SuperSecretPassword!, true)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Practice_Suite" title="com.selenium.practicesession.LoginTest" class="method navigator-link" hash-for-method="validLoginTest(tomsmith, wrongpassword, false)">validLoginTest(tomsmith, wrongpassword, false)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Practice_Suite" title="com.selenium.practicesession.LoginTest" class="method navigator-link" hash-for-method="validLoginTest(wronguser, wrongpassword, false)">validLoginTest(wronguser, wrongpassword, false)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Practice_Suite -->
@@ -156,6 +156,14 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="validLoginTest(wronguser, wrongpassword, false)">
+                  </a> <!-- validLoginTest(wronguser, wrongpassword, false) -->
+                  <span class="method-name">validLoginTest</span>
+                  <span class="parameters">(wronguser,wrongpassword,false)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="validLoginTest(tomsmith, SuperSecretPassword!, true)">
                   </a> <!-- validLoginTest(tomsmith, SuperSecretPassword!, true) -->
                   <span class="method-name">validLoginTest</span>
@@ -168,14 +176,6 @@
                   </a> <!-- validLoginTest(tomsmith, wrongpassword, false) -->
                   <span class="method-name">validLoginTest</span>
                   <span class="parameters">(tomsmith,wrongpassword,false)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validLoginTest(wronguser, wrongpassword, false)">
-                  </a> <!-- validLoginTest(wronguser, wrongpassword, false) -->
-                  <span class="method-name">validLoginTest</span>
-                  <span class="parameters">(wronguser,wrongpassword,false)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -242,26 +242,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'secureAreaTest')
-data.setCell(0, 2, 'com.selenium.practicesession.SecureAreaTest')
-data.setCell(0, 3, 910);
+data.setCell(0, 1, 'validLoginTest')
+data.setCell(0, 2, 'com.selenium.practicesession.LoginTest')
+data.setCell(0, 3, 1630);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'validLoginTest')
 data.setCell(1, 2, 'com.selenium.practicesession.LoginTest')
-data.setCell(1, 3, 875);
+data.setCell(1, 3, 1154);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'validLoginTest')
-data.setCell(2, 2, 'com.selenium.practicesession.LoginTest')
-data.setCell(2, 3, 741);
+data.setCell(2, 1, 'secureAreaTest')
+data.setCell(2, 2, 'com.selenium.practicesession.SecureAreaTest')
+data.setCell(2, 3, 1028);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'validLoginTest')
 data.setCell(3, 2, 'com.selenium.practicesession.LoginTest')
-data.setCell(3, 3, 722);
+data.setCell(3, 3, 889);
 window.suiteTableData['Practice_Suite']= { tableData: data, tableDiv: 'times-div-Practice_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Practice_Suite">
               </div> <!-- times-div-Practice_Suite -->
             </div> <!-- times-div -->
@@ -297,86 +297,74 @@ return data;
               <div class="chronological-class-name">com.selenium.practicesession.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">141 ms</span>
+                <span class="method-start">274 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">2308 ms</span>
+                <span class="method-start">4357 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">validLoginTest(tomsmith, SuperSecretPassword!, true)</span>
-                <span class="method-start">2309 ms</span>
+                <span class="method-start">4359 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">3185 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=validLoginTest status=SUCCESS method=LoginTest.validLoginTest(java.lang.String,java...)</span>
-                <span class="method-start">3284 ms</span>
+                <span class="method-start">5516 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">3287 ms</span>
+                <span class="method-start">5714 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">4831 ms</span>
+                <span class="method-start">8009 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">validLoginTest(wronguser, wrongpassword, false)</span>
-                <span class="method-start">4831 ms</span>
+                <span class="method-start">8010 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">5572 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=validLoginTest status=SUCCESS method=LoginTest.validLoginTest(java.lang.String,java...)</span>
-                <span class="method-start">5667 ms</span>
+                <span class="method-start">9641 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">5668 ms</span>
+                <span class="method-start">9753 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initPages</span>
+                <span class="method-start">11709 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">validLoginTest(tomsmith, wrongpassword, false)</span>
-                <span class="method-start">7180 ms</span>
+                <span class="method-start">11710 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">initPages</span>
-                <span class="method-start">7180 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">7902 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=validLoginTest status=SUCCESS method=LoginTest.validLoginTest(java.lang.String,java...)</span>
-                <span class="method-start">7996 ms</span>
+                <span class="method-start">12600 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.selenium.practicesession.SecureAreaTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">8012 ms</span>
+                <span class="method-start">12735 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">9548 ms</span>
+                <span class="method-start">14462 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">secureAreaTest</span>
-                <span class="method-start">9549 ms</span>
+                <span class="method-start">14464 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=secureAreaTest status=SUCCESS method=SecureAreaTest.secureAreaTest()[pri:0, instanc...)</span>
-                <span class="method-start">10459 ms</span>
+                <span class="method-start">15493 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">flushReport</span>
-                <span class="method-start">10559 ms</span>
+                <span class="method-start">15603 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

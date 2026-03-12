@@ -30,7 +30,6 @@
 package com.selenium.practicesession;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -77,9 +76,6 @@ public class LoginTest extends BaseTest {
         }
     }
 
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
+  
 }
 

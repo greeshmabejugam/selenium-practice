@@ -12,6 +12,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
 public class BaseTest {
 
     WebDriver driver;
@@ -41,6 +48,17 @@ public class BaseTest {
     public void tearDown(ITestResult result) {
         if(result.getStatus() == ITestResult.FAILURE) {
             test.fail(result.getThrowable());
+            
+            try {
+                File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+                String testName = result.getName();
+                FileUtils.copyFile(screenshot, 
+                    new File("target/screenshots/" + testName + ".png"));
+                test.addScreenCaptureFromPath("target/screenshots/" + testName + ".png");
+                System.out.println("Screenshot saved for: " + testName);
+            } catch(IOException e) {
+                System.out.println("Screenshot failed: " + e.getMessage());
+            }
         } else if(result.getStatus() == ITestResult.SUCCESS) {
             test.pass("Test passed!");
         } else {

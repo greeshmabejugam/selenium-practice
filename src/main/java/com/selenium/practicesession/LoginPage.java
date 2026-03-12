@@ -47,9 +47,9 @@ public class LoginPage {
     	    driver.findElement(pwd1).clear();
     	    driver.findElement(pwd1).sendKeys(pwd); // ← use the parameter!
     	}
-    	By xpath1 = By.xpath("/html/body/div[2]/div/div/form/button/i");
+    	By loginButton = By.cssSelector("button[type='submit']");
     	public void clickLogin() {
-    		driver.findElement(xpath1).click();
+    		driver.findElement(loginButton).click();
     	}
     	
     	public void login(String user, String pwd) {
